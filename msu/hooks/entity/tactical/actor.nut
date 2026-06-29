@@ -99,7 +99,7 @@
 
 	q.isEngagedInMelee <- function()
 	{
-		return this.isPlacedOnMap() && this.getTile().hasZoneOfControlOtherThan(this.getAlliedFactions());
+		return this.isPlacedOnMap() && this.getTile().hasZoneOfControlOtherThan(this.getAlliedFactions()) && (this.getTile().Properties.Effect == null || this.getTile().Properties.Effect.Type != "smoke");
 	}
 
 	q.isDoubleGrippingWeapon <- function()
